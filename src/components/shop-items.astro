@@ -1,0 +1,73 @@
+---
+import { AddToCart } from './AddToCart';
+
+function formatCurrency(amount: number) {
+	return new Intl.NumberFormat('en-US', {
+		currency: 'usd',
+		style: 'currency',
+	}).format(amount);
+}
+
+const result = await fetch(
+	'https://astro-frontend-masters-api.netlify.app/api/products'
+);
+
+if (!result.ok) {
+	console.error(result);
+}
+
+const shopItems: ShopItem[] = await result.json();
+
+interface Props {
+	count?: number;
+	addToCart?: boolean;
+}
+
+// set astro component props
+const { count = Infinity, addToCart = true } = Astro.props;
+---
+
+<section class="shop-items">
+	{
+		shopItems.slice(0, count).map((shopItem) => (
+			<div class="item">
+				<img src={shopItem.image.src} alt={shopItem.image.alt} />
+				<h2>{shopItem.title}</h2>
+				<p>{shopItem.description}</p>
+				<p class="price">{formatCurrency(shopItem.price)}</p>
+
+				{addToCart ? <AddToCart item={shopItem} client:only="react" /> : null}
+			</div>
+		))
+	}
+</section>
+
+<style>
+	.shop-items {
+		display: flex;
+		gap: 3rem 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 2rem 0;
+	}
+
+	.item {
+		width: 250px;
+	}
+
+	.item img {
+		aspect-ratio: 1;
+		border-radius: 0.125rem;
+		display: block;
+		width: 100%;
+	}
+
+	.item h2 {
+		font-size: 1.125rem;
+		margin: 0.75rem 0 0;
+	}
+
+	.item p {
+		margin: 0.25rem 0 0;
+	}
+</style>
