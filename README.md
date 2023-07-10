@@ -1,4 +1,4 @@
-# Astro Frontend Masters Workshop
+# Astro Workshop
 
 TKTK
 
