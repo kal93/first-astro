@@ -6,7 +6,7 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-frontend-masters.netlify.app',
+  site: 'https://silly-salamander-7605d5.netlify.app',
   output: 'hybrid',
   integrations: [react(), solidJs()],
   adapter: netlify()
