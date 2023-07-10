@@ -1,5 +1,5 @@
 {
-	"name": "",
+	"name": "maaz-sandwich",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -10,25 +10,24 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^0.19.0",
-		"@astrojs/netlify": "^2.2.2",
-		"@astrojs/react": "^2.1.1",
-		"@astrojs/rss": "^2.3.2",
-		"@astrojs/solid-js": "^2.1.0",
-		"@nanostores/react": "^0.5.0",
-		"@nanostores/solid": "^0.3.2",
-		"@types/react": "^18.0.35",
-		"@types/react-dom": "^18.0.11",
-		"astro": "^2.3.0",
+		"@astrojs/netlify": "^2.3.0",
+		"@astrojs/react": "^2.2.1",
+		"@astrojs/rss": "^2.4.3",
+		"@astrojs/solid-js": "^2.2.0",
+		"@nanostores/react": "^0.7.1",
+		"@nanostores/solid": "^0.4.2",
+		"astro": "^2.8.0",
 		"markdown-it": "^13.0.1",
-		"nanostores": "^0.8.0",
+		"nanostores": "^0.9.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"sanitize-html": "^2.10.0",
-		"solid-js": "^1.7.3"
+		"sanitize-html": "^2.11.0",
+		"solid-js": "^1.7.7"
 	},
 	"devDependencies": {
 		"@types/markdown-it": "^12.2.3",
+		"@types/react": "^18.2.14",
+		"@types/react-dom": "^18.2.6",
 		"@types/sanitize-html": "^2.9.0"
 	}
 }
