@@ -2,6 +2,8 @@
 
 TKTK
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5a7620e1-c2ef-4c9a-84ae-852f100dba6a/deploy-status)](https://app.netlify.com/sites/silly-salamander-7605d5/deploys)
+
 ## What are we building?
 
 Small business site that uses several of the common workflows that many (most?) websites end up following.
